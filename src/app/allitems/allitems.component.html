@@ -1,0 +1,13 @@
+<div class="container">
+
+<h1>Your shopping basket!</h1>
+<ul style="list-style: none;">
+  <li for *ngFor="let receipt of receiptList">
+  {{receipt.quantity}} {{receipt.itemName}} : {{receipt.price | currency }}
+
+  <li>Sales Tax: {{salesTax | currency}}</li>
+  <li>Total: {{totalValue | currency}}</li>
+</ul>
+
+<button type="button" class="btn btn-default" (click)="onReturn()">Create another cart</button>
+</div>
